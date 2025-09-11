@@ -20,40 +20,40 @@ const Navbar = () => {
   return (
     <>
       <nav className="container mx-auto flex items-center justify-between py-4">
-        {/* Left-Logo */}
+        {/* Bên trái - Logo */}
         <div>
           <Link to="/" className="text-2xl font-medium">
             Rabbit
           </Link>
         </div>
-        {/*Center - Navigation Links */}
+        {/* Giữa - Liên kết điều hướng */}
         <div className="hidden md:flex space-x-6">
           <Link
             to="#"
             className="text-gray-700 hover:text-black text-sm font-medium uppercase"
           >
-            Men
+            Nam
           </Link>
           <Link
             to="#"
             className="text-gray-700 hover:text-black text-sm font-medium uppercase"
           >
-            Women
+            Nữ
           </Link>
           <Link
             to="#"
             className="text-gray-700 hover:text-black text-sm font-medium uppercase"
           >
-            Top Wear
+            Áo
           </Link>
           <Link
             to="#"
             className="text-gray-700 hover:text-black text-sm font-medium uppercase"
           >
-            Bottom Wear
+            Quần
           </Link>
         </div>
-        {/* Right - Icons */}
+        {/* Bên phải - Icon */}
         <div className="flex items-center space-x-4">
           <Link to="/profile" className="hover:text-black">
             <HiOutlineUser className="h-6-w-6 text-gray-700" />
@@ -67,7 +67,7 @@ const Navbar = () => {
               4
             </span>
           </button>
-          {/* Search */}
+          {/* Thanh tìm kiếm */}
           <div className="overflow-hidden">
             <SearchBar />
           </div>
@@ -78,7 +78,7 @@ const Navbar = () => {
       </nav>
       <CartDrawer drawerOpen={drawerOpen} toggleCartDrawer={toggleCartDrawer} />
 
-      {/* Mobile Navigation Drawer */}
+      {/* Menu điều hướng trên di động */}
       <div
         className={`fixed top-0 left-0 w-3/4 sm:w-1/2 md:w-1/3 h-full bg-white shadow-lg transform transition-transform duration-300 z-50 ${
           navDrawerOpen ? "translate-x-0" : "-translate-x-full"
@@ -90,19 +90,19 @@ const Navbar = () => {
           </button>
         </div>
         <div className="p-4">
-          <h2 className="text-xl font-semibold mb-4">Menu</h2>
+          <h2 className="text-xl font-semibold mb-4">Danh mục</h2>
           <nav className="space-y-4">
             <Link to="#" onClick={toggleNavDrawer} className="block text-gray-600 hover:text-black">
-            Men
+              Nam
             </Link>
             <Link to="#" onClick={toggleNavDrawer} className="block text-gray-600 hover:text-black">
-            Women
+              Nữ
             </Link>
             <Link to="#" onClick={toggleNavDrawer} className="block text-gray-600 hover:text-black">
-            Top Wear
+              Áo
             </Link>
             <Link to="#" onClick={toggleNavDrawer} className="block text-gray-600 hover:text-black">
-            Bottom Wear
+              Quần
             </Link>
           </nav>
         </div>
